@@ -35,12 +35,19 @@ class AdapterMenu(var list: ArrayList<Menus>): RecyclerView.Adapter<AdapterMenu.
             title.text=data.name1
             //count.text=data.descripcion.toString()
 
+
             Glide.with(itemView.context).load(data.thumbnail).into(thumbnail)
 
             itemView.setOnClickListener{
                 Toast.makeText(itemView.context,"Platillo: ${data.name1}",Toast.LENGTH_LONG).show()
+
             }
 
+
+
         }
+
     }
+
+
 }
