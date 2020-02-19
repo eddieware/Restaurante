@@ -29,7 +29,7 @@ class AdapterMenu(var list: ArrayList<Menus>): RecyclerView.Adapter<AdapterMenu.
     class ViewHolder(view:View):RecyclerView.ViewHolder(view){
         fun bindItems(data: Menus){
             val title:TextView=itemView.findViewById(R.id.txtTitle)
-            val count:TextView=itemView.findViewById(R.id.descTxt)
+            //val count:TextView=itemView.findViewById(R.id.descTxt)
             val thumbnail: ImageView =itemView.findViewById(R.id.thumbnail)
 
             title.text=data.name1
