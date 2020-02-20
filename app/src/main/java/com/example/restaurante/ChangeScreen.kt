@@ -39,8 +39,8 @@ class ChangeScreen : AppCompatActivity(){
                 startActivity(intAcerca)
             }
             R.id.platosFuertes-> abrirPlatillos("2")
-            //R.id.ensaladas-> abrirPlatillos("3")
-            //R.id.bebidas-> abrirPlatillos("4")
+            R.id.ensaladas-> abrirPlatillos("3")
+            R.id.bebidas-> abrirPlatillos("4")
         }
 
         return super.onOptionsItemSelected(item)
@@ -50,11 +50,8 @@ class ChangeScreen : AppCompatActivity(){
         val intPlatillos = Intent(this,MainActivity::class.java)
         //println(i+"Here debug Point!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         intPlatillos.putExtra("PLATILLO",i)
-        if(i=="2")
-        {
-            startActivity(intPlatillos)
 
-        }
+            startActivity(intPlatillos)
 
 
     }
