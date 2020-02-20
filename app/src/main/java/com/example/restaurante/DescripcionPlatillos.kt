@@ -13,7 +13,8 @@ class DescripcionPlatillos : AppCompatActivity(){
         val intPlatillo = this.intent
         titleDescripcion.text = intPlatillo.getStringExtra("PLATILLO")
         descripcion.text = intPlatillo.getStringExtra("DETALLE")
-        
+        var res = intPlatillo.getIntExtra("IMAGEN",0)
+        thumbnail.setImageResource(res)
 
     }
 

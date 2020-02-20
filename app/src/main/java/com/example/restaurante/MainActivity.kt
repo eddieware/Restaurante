@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         val menus=ArrayList<Menus>()
 
         menus.add(Menus("Pozole",R.drawable.pozole,"Platillo de abundante Caldo"))
-        menus.add(Menus("ChileAhogado",R.drawable.chileahogada,"asdf"))
-        menus.add(Menus("Ensaladas",R.drawable.ensaladas,"asdfcvbg"))
-        menus.add(Menus("Pavo",R.drawable.pavo,"asdfg"))
-        menus.add(Menus("Taco",R.drawable.taco,"asdf"))
+        menus.add(Menus("ChileAhogado",R.drawable.chileahogada,"Literal es un chile con caldo dmase chile because Mexicans"))
+        menus.add(Menus("Ensaladas",R.drawable.ensaladas,"La ensalada puede contener lo que usted le indique al cheff"))
+        menus.add(Menus("Pavo",R.drawable.pavo,"Pavo tradicional o estilo Sonora"))
+        menus.add(Menus("Taco",R.drawable.taco,"Tacos de canasta"))
 
         val adapter=AdapterMenu(menus)
         recycler.adapter=adapter
