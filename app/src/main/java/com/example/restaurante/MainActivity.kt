@@ -24,12 +24,19 @@ class MainActivity : AppCompatActivity() {
 
         val menus=ArrayList<Menus>()
 
-        menus.add(Menus("Pozole",R.drawable.pozole))
+        menus.add(Menus("Pozole",R.drawable.pozole,"Platillo de abundante Caldo"))
+        menus.add(Menus("ChileAhogado",R.drawable.chileahogada,"asdf"))
+        menus.add(Menus("Ensaladas",R.drawable.ensaladas,"asdfcvbg"))
+        menus.add(Menus("Pavo",R.drawable.pavo,"asdfg"))
+        menus.add(Menus("Taco",R.drawable.taco,"asdf"))
+
         val adapter=AdapterMenu(menus)
         recycler.adapter=adapter
 
 
     }
+
+
 
 
 

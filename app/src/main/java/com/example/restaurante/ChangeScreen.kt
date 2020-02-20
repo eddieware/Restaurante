@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +17,7 @@ class ChangeScreen : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.act_changescreen)
+        setContentView(R.layout.activity_main)
 
     }
 
@@ -29,14 +30,17 @@ class ChangeScreen : AppCompatActivity(){
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
+
+
+
         when( item.itemId ){
             R.id.aboutUs-> {
                 val intAcerca = Intent(this,AboutUs::class.java)
                 startActivity(intAcerca)
             }
-            /*R.id.itmEnsalada-> abrirPlatillos("2")
-            R.id.itmPlatilloF-> abrirPlatillos("1")
-            R.id.itmBebidas-> abrirPlatillos("3")*/
+            R.id.platosFuertes-> abrirPlatillos("2")
+            //R.id.ensaladas-> abrirPlatillos("3")
+            //R.id.bebidas-> abrirPlatillos("4")
         }
 
         return super.onOptionsItemSelected(item)
@@ -44,7 +48,14 @@ class ChangeScreen : AppCompatActivity(){
 
     private fun abrirPlatillos(i: String) {
         val intPlatillos = Intent(this,MainActivity::class.java)
+        //println(i+"Here debug Point!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         intPlatillos.putExtra("PLATILLO",i)
-        startActivity(intPlatillos)
+        if(i=="2")
+        {
+            startActivity(intPlatillos)
+
+        }
+
+
     }
 }

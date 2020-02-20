@@ -1,5 +1,6 @@
 package com.example.restaurante
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class AdapterMenu(var list: ArrayList<Menus>): RecyclerView.Adapter<AdapterMenu.ViewHolder>(){
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v=LayoutInflater.from(parent?.context).inflate(R.layout.list_food,parent,false)
-        return ViewHolder(v)
-    }
+        val v=LayoutInflater.from(parent.context).inflate(R.layout.list_food,parent,false)
+        return ViewHolder(v)    }
+
 
     override fun getItemCount(): Int {
         return list.size
@@ -40,6 +40,12 @@ class AdapterMenu(var list: ArrayList<Menus>): RecyclerView.Adapter<AdapterMenu.
 
             itemView.setOnClickListener{
                 Toast.makeText(itemView.context,"Platillo: ${data.name1}",Toast.LENGTH_LONG).show()
+
+                val intDetalle = Intent(itemView.context,DescripcionPlatillos::class.java)
+                intDetalle.putExtra("PLATILLO",data.name1)
+                intDetalle.putExtra("DETALLE",data.descripcionP)
+                intDetalle.putExtra("IMAGEN",data.thumbnail)
+                itemView.context.startActivity(intDetalle)
 
             }
 
