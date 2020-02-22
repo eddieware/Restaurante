@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         menus.add(Menus("Ensalada De Frutas",R.drawable.ensaladadecarnicos,"Ensalada de champiñones mozarella y jamon ", "3"))
         //BEBIDAS
         menus.add(Menus("Cerveza",R.drawable.cerveza,"Cerveza tradicional clara u obscura", "4"))
-        menus.add(Menus("Mezcal",R.drawable.mezcal,"Mezcal proveniente de Oaxaca con fruto exoticos", "4"))
+        menus.add(Menus("Mezcal",R.drawable.mezcal,"Mezcal proveniente de Oaxaca con frutos exoticos", "4"))
         menus.add(Menus("Whisky Barrels",R.drawable.whiskeybarrels,"Whisky Barrels en las rocas", "4"))
         var filtermenu = menus.filter{it.categoria==itemVariation} as ArrayList<Menus>
         val adapter=AdapterMenu(filtermenu)
